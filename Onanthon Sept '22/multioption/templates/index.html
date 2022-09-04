@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/i18n/zh-TW.min.js" integrity="sha512-whWyZS4LtoXu4LzFJbHIgL9Cr7Sf2+KyeEAGumtXN+8U234v1R89monfd9PLYnC0TNBArmPnkFOVo8ShuMpZaw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.css" integrity="sha512-p209YNS54RKxuGVBVhL+pZPTioVDcYPZPYYlKWS9qVvQwrlzxBxkR8/48SCP58ieEuBosYiPUS970ixAfI/w/A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script>
+        $(document).ready(function()
+        {
+          $("#ddlselect").select2({
+               placeholder:'Select Colours ...',
+               closeOnSelect:false
+          });
+          $("#ddlselect").on('change',function()
+          {
+              var coloursdisplay=$("#ddlselect option:selected").text();
+              $("#txtcolors").val(colorsdisplay);
+          });
+        });
+    </script>
+</head>
+<body>
+    <center>
+        <h1>Pookalam Finder</h1>
+        <hr/>
+        <select id="ddlselect" multiple style="width: 250px;">
+            <option> Red </option>
+            <option> Yellow </option>
+            <option> White </option>
+            <option> Orange </option>
+            <option> Green </option>
+        </select>
+        <input type="text" id="txtcolors"/>
+        <input type="submit" value="Insert Records ...."/>
+
+        </center>
+</body>
+</html>
