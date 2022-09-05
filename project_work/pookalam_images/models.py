@@ -4,7 +4,7 @@ from django.db import models
 # Create your models here.
 
 class Tables(models.Model):
-    image = models.ImageField()
+    image = models.URLField()
     red = models.IntegerField()
     yellow = models.IntegerField()
     white = models.IntegerField()
