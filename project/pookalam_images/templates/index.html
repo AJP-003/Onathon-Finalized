@@ -1,0 +1,239 @@
+
+
+<html>
+<head>
+        <!-- <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css"> -->
+        <style>
+                body{
+    margin: 0;
+    padding: 0;
+    background: #313131;
+    
+}
+/* .slider{
+        height : 400px;
+        width:500px;
+        margin: 100px auto;
+    animation: slide 20s infinite;
+
+
+}
+@keyframes slide{
+    25%{
+        background: url(https://image.shutterstock.com/image-vector/onam-pookalam-design-vector-260nw-2012113883.jpg);
+    }
+    75%{
+        background: url(https://image.shutterstock.com/image-photo/closeup-onam-pookalam-athappokkalam-floral-260nw-2010386972.jpg);
+    }
+    50%{
+        background: url(https://c8.alamy.com/comp/2G31JC1/mahabali-or-maveli-kerala-old-king-he-is-coming-for-every-year-onam-celebration-2G31JC1.jpg);
+    }
+    100%{
+        background: url(https://image.shutterstock.com/image-vector/onam-pookalam-design-vector-260nw-2012113883.jpg);
+    }
+} */
+
+
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+/* DEMO-SPECIFIC STYLES */
+.typewriter h2 {
+  color: #fff;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 5.5s steps(30, end),
+    blink-caret .5s step-end 2s;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange }
+}
+
+
+</style>
+</head>
+
+<body>
+	<center>
+		<h1 style="
+          
+                font-size: 60px;
+                font-style: italic;
+                background: linear-gradient(
+                    to right, #f32170, #ff6b08,
+                     #cf23cf, #eedd44);
+                -webkit-text-fill-color: transparent;
+                -webkit-background-clip: text;">
+		Pookalam Hunter
+	</h1>
+        <div class="typewriter">
+		<h2 style="font-style:italic; color: lightblue;">
+		Finding your perfect pookalam...
+
+	</h2>
+        </div>
+        
+
+  <h3 style="color: white ; font-size: 20px;
+  border: 5px solid gray; border-color:lightblue">Select your priority for each Colour.
+  <br>Make sure you do not put the same priority number for two colours !</h4>
+  
+  
+  <form id="form1" method="post" >{% csrf_token %}
+        <h3 style="color: red ;display: inline-block ; width: 150px;">RED</h3>
+
+        <select name="c1" width=300 
+                >
+                <option value='1'>1</option>
+                <option value='2'>2</option>
+                <option value='3'>3</option>
+                <option value='4'>4</option>
+                <option value='5'>5</option>
+                <option value='6'>6</option>
+                <option value='7'>7</option>
+                <option value='100' selected>NONE</option>
+        </select>
+
+      
+        <h3 style="color: yellow;display: inline-block; width: 150px;">YELLOW</h3>
+
+        <select name="c2" width=300 
+               >
+                <option value='1'>1</option>
+                <option value='2'>2</option>
+                <option value='3'>3</option>
+                <option value='4'>4</option>
+                <option value='5'>5</option>
+                <option value='6'>6</option>
+                <option value='7'>7</option>
+                <option value='100' selected>NONE</option>
+        </select>
+
+        
+            <h3 style="color: white;display: inline-block; width: 150px;">WHITE</h3>
+    
+            <select name="c3" width=300>
+            <option value='1'>1</option>
+            <option value='2'>2</option>
+            <option value='3'>3</option>
+            <option value='4'>4</option>
+            <option value='5'>5</option>
+            <option value='6'>6</option>
+            <option value='7'>7</option>
+            <option value='100' selected>NONE</option>
+            </select>
+          
+            <h3 style="color: orange;display: inline-block; width: 150px;">ORANGE</h3>
+    
+            <select name="c4" width=300 
+                    >
+                    <option value='1'>1</option>
+                    <option value='2'>2</option>
+                    <option value='3'>3</option>
+                    <option value='4'>4</option>
+                    <option value='5'>5</option>
+                    <option value='6'>6</option>
+                    <option value='7'>7</option>
+                    <option value='100' selected>NONE</option>
+            </select>
+          
+            <h3 style="color: violet;display: inline-block; width: 150px;">VIOLET</h3>
+    
+            <select name="c5" width=300 
+                    >
+                    <option value='1'>1</option>
+                    <option value='2'>2</option>
+                    <option value='3'>3</option>
+                    <option value='4'>4</option>
+                    <option value='5'>5</option>
+                    <option value='6'>6</option>
+                    <option value='7'>7</option>
+                    <option value='100' selected>NONE</option>
+            </select>
+          
+            <h3 style="color: green;display: inline-block; width: 150px;">GREEN</h3>
+    
+            <select name="c6" width=300 
+                    >
+                    <option value='1'>1</option>
+                    <option value='2'>2</option>
+                    <option value='3'>3</option>
+                    <option value='4'>4</option>
+                    <option value='5'>5</option>
+                    <option value='6'>6</option>
+                    <option value='7'>7</option>
+                    <option value='100' selected>NONE</option>
+            </select>
+          
+            <h3 style="color: pink;display: inline-block; width: 150px;">PINK</h3>
+    
+            <select name="c7" width=300 
+                    >
+                    <option value='1'>1</option>
+                    <option value='2'>2</option>
+                    <option value='3'>3</option>
+                    <option value='4'>4</option>
+                    <option value='5'>5</option>
+                    <option value='6'>6</option>
+                    <option value='7'>7</option>
+                    <option value='100' selected>NONE</option>
+            </select>
+            <hr>
+              <input type="submit">
+            <hr>
+          </form>
+              
+            
+                
+      
+	</center>
+        <!-- <div class="slider">
+
+        </div> -->
+        <div class="row">
+                <div class="column">
+                  
+                        <img src="https://c8.alamy.com/comp/2G31JC1/mahabali-or-maveli-kerala-old-king-he-is-coming-for-every-year-onam-celebration-2G31JC1.jpg" alt="Snow" style="width:300px">
+                        
+                </div>
+                <div class="column">
+
+                <div >
+                        <h2 style=" color: white; font-family:Bradley Hand; font-style: cursive
+                        font-size: 10px;
+                        font-style: italic;">Onam is a festival of joy, colours and stories. Make your onam more colourful with the right pookalam on your doorstep. </h2>
+                <h1 style="color: pink; text-align: center">Happy Onam!</h1>
+        </div>
+                </div>
+
+                
+        </div>
+
+
+</body>
+
+</html>

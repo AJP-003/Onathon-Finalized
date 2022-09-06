@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <style>
+    body{
+      margin: 0;
+      padding: 0;
+      background: #313131;
+      
+  }
+  </style>
+  </head>
+    <body>
+    
+  <h1 style="color:white">Here are the results :</h1>
+  <ul>
+    {% for i in query_set %}
+    <img src = "{{i.image}}" height="300px" >
+    {% endfor %}
+    </ul>
+      <form>
+        <input type="button" value = "Back to Home page " onclick="history.back()">
+      </form>
+    </body>
+    
+</html>
