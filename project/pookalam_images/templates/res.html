@@ -1,0 +1,14 @@
+<html>
+    <body>
+  <h1>Here are the results :</h1>
+  <ul>
+    {% for i in query_set %}
+    <img src = "{{i.image}}" width="350px">
+    {% endfor %}
+    </ul>
+      <form>
+        <input type="button" value = "Back to Home page " onclick="history.back()">
+      </form>
+    </body>
+    
+</html>
